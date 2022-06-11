@@ -1,0 +1,27 @@
+*{
+	font-family: sans-serif;
+}
+body{
+	background-color: wheat;
+}
+label{
+	margin: 10px;
+	font-size: 25px;
+}
+input{
+	margin: 10px;
+	border-radius: 10px;
+	background-color: transparent;
+	font-size: 25px;
+}
+button{
+	border-color: black;
+	font-size: 25px;
+	background-color: transparent;
+	border-radius: 10px;
+}
+button:hover{
+	cursor: pointer;
+	color: green;
+	font-size:30px;
+}
