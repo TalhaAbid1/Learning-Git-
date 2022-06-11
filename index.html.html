@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ABID</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+        <h1>TO DO LIST</h1>
+            <form id="form">
+                <input  id="data" type="text">
+                <button>Submit</button>
+            </form>
+            <h3>List Of Work</h3>
+                <ul id="list"></ul>
+
+<script type="text/javascript">
+
+    let form = document.getElementById("form")
+    let data = document.getElementById("data")
+    let list = document.getElementById("list")
+
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault()
+        addNew(data.value.toUpperCase())
+    })
+
+    function addNew(x)
+    {
+        let html=`<li> ${x} <button onclick="deleteItems(this)">Delete</button></li>`
+        list.insertAdjacentHTML("beforeend",html)
+        data.value=""
+        data.focus()
+    }
+    function deleteItems(e)
+    {
+        e.parentElement.remove()
+    }
+ 
+</script>
+</body>
+</html>
